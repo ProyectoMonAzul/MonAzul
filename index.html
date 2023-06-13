@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MonAzul</title>
+    <script src="https://kit.fontawesome.com/283335a286.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@700&family=Mulish:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="CalculadoraEstilo.css">
+
+  
+    </head>
+    <script>
+        function mostrarFechaHora() {
+            var fecha = new Date();
+            var diaSemana = fecha.getDay(); // Obtener el día de la semana (0: Domingo, 1: Lunes, ..., 6: Sábado)
+            var dia = fecha.getDate();
+            var mes = fecha.getMonth(); // Los meses en JavaScript son indexados desde 0
+            var anio = fecha.getFullYear();
+            var hora = fecha.getHours();
+            var minutos = fecha.getMinutes();
+            var segundos = fecha.getSeconds();
+    
+            // Agregar ceros iniciales si es necesario
+            dia = dia < 10 ? '0' + dia : dia;
+            hora = hora < 10 ? '0' + hora : hora;
+            minutos = minutos < 10 ? '0' + minutos : minutos;
+            segundos = segundos < 10 ? '0' + segundos : segundos;
+    
+            // Nombres de los días de la semana y los meses
+            var nombresDias = [
+                'Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'
+            ];
+            var nombresMeses = [
+                'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
+                'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'
+            ];
+    
+            // Obtener los elementos HTML y asignar el contenido
+            var elementoDiaSemana = document.getElementById('diaSemana');
+            elementoDiaSemana.innerHTML = nombresDias[diaSemana];
+    
+            var elementoFecha = document.getElementById('fecha');
+            elementoFecha.innerHTML = dia + ' de ' + nombresMeses[mes] + ' de ' + anio;
+    
+            var elementoHora = document.getElementById('hora');
+            elementoHora.innerHTML = hora + ':' + minutos + ':' + segundos + ' hrs';
+        }
+    
+        // Llamar a la función para mostrar la fecha y hora actualizada
+        mostrarFechaHora();
+    </script>
+
+
+<body onload="mostrarFechaHora()">
+
+    
+
+    <header class="encabezado">
+        <div class="contenedor-navegacion">
+            <div class="contenido-navegacion contenedor">
+                <div class="logo">
+                    <h2><span class="Morado">Mo</span><span class="Azul">nA</span><span class="Rosa">zul</span></h2>
+                </div>
+                <nav class="navegacion ocultar">
+                    <a href="#Nosotros">Sobre Nosotros</a>
+                    <a href="#Productos">Menú</a>
+                    <a href="#Colores">Colores</a>
+                    <a href="#Matriz">Matriz</a>
+                    <a href="#Contactos">Contacto</a>
+                    <a href="#Opinion">Opinion</a>
+                </nav>
+                <div class="hamburguesa">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+        <div class="contenido-header" id="Principal">
+            <div class="contenedor-encabezado">
+                <div class="texto-encabezado">
+                    <h2 >MonAzul</h2>
+                    <a href="#Productos" class="btn bordes">Productos</a>
+                </div>
+                <video autoplay loop muted>
+                    <source src="/assets/videoprincipal.mp4">
+                </video>
+            </div>
+        </div>
+    </header>
+
+    <div class="contenedor-nosotros contenedor" id="Nosotros">
+        <div class="texto-nosotros">
+            <p class="bienvenida">Bienvenido a</p>
+            <h1>MonAzul</h1>
+            <p>En MonAzul mantenemos una excelente calidad de productos, ofrecemos una maravillosa atención al cliente y tenemos los productos mas bonitos en Obregon ¡En MonAzul nos esforzamos para que todo salga perfecto!
+            </p>
+            <a href="https://wa.link/pdef8h" class="btn btn-Rosa">Contactar</a>
+        </div>
+        <div class="imagenes-nosotros">
+            <div class="imagen1">
+                <img data-src="/assets/img/MonAzul1.jpg" alt="Nosotros1">
+            </div>
+            <div class="imagenes2">
+                <img data-src="/assets/img/MonAzul2.jpg" alt="Nosotros2">
+                <img data-src="/assets/img/MonAzul3.jpeg" alt="Nosotros3">
+            </div>
+        </div>
+    </div>
+
+    <section class="menu contenedor" id="Productos">
+        <h2 class="texto-productos">Productos</h2>
+        <div class="productos">
+            <div class="producto" data-producto="Invitaciones">
+                <img data-src="assets/img/imgPlimPlim.jpg" alt="Invitaciones">
+                <h2>Plim Plim</h2>
+                <p>Medidas 10 alto, 9 ancho</p>
+                <p>Inccluye 50 Invitaciones</p>
+                <div class="precio">
+                    <p>$150.0</p>
+                </div>
+            </div>
+            <div class="producto" data-producto="Invitaciones">
+                <img data-src="assets/img/imgToyStory.jpg" alt="Invitaciones">
+                <h2>Toy Story</h2>
+                <p>Medidas 10 alto, 9 ancho</p>
+                <p>Inccluye 50 Invitaciones</p>                
+                <div class="precio">
+                    <p>$150.0</p>
+                </div>
+            </div>
+            <div class="producto" data-producto="Invitaciones">
+                <img data-src="assets/img/imgMinnie.jpg" alt="Invitaciones">
+                <h2>Minnie</h2>
+                <p>Medidas 10 alto, 9 ancho</p>
+                <p>Inccluye 50 Invitaciones</p>                
+                <div class="precio">
+                    <p>$150.0</p>
+                </div>
+            </div>
+
+            <div class="producto" data-producto="Calcamonias">
+                <img data-src="assets/img/imgCirculares.jpg" alt="Calcamonias">
+                <h2>Circulares</h2>
+                <p>Medidas 5cm</p>
+                <p>Inccluye 50 Calcamonias</p>                
+                <div class="precio">
+                    <p>$100.0</p>
+                </div>
+            </div>
+            <div class="producto" data-producto="Calcamonias">
+                <img data-src="assets/img/imgCuadradas.jpg" alt="Calcamonias">
+                <h2>Cuadradas</h2>
+                <p>Medidas 5cm</p>
+                <p>Inccluye 50 Calcamonias</p>               
+                <div class="precio">
+                    <p>$100.0</p>
+                </div>
+            </div>
+            <div class="producto" data-producto="Calcamonias">
+                <img data-src="assets/img/imgFrozen.jpg" alt="Cajitas">
+                <h2>Frozen</h2>
+                <p>Medidas 10 alto, 9 ancho</p>
+                <p>Inccluye 50 Cajitas</p>                
+                <div class="precio">
+                    <p>$1000.0</p>
+                </div>
+            </div>
+            <div class="producto" data-producto="Cajitas">
+                <img data-src="assets/img/imgpawpatrol.jpg" alt="Cajitas">
+                <h2>Paw Patrol</h2>
+                <p>Medidas 10 alto, 9 ancho</p>
+                <p>Inccluye 50 Cajitas</p>                
+                <div class="precio">
+                    <p>$1000.0</p>
+                </div>
+            </div>
+            <div class="producto" data-producto="Cajitas">
+                <img data-src="assets/img/imgjurassicpark.jpg" alt="Cajitas">
+                <h2>Jurassic Park</h2>
+                <p>Medidas 10 alto, 9 ancho</p>
+                <p>Inccluye 50 Cajitas</p>                
+                <div class="precio">
+                    <p>$1000.0</p>
+                </div>
+            </div>
+            <div class="producto" data-producto="Cajitas">
+                <img data-src="assets/img/imgHelloKitty.jpg" alt="Cajitas">
+                <h2>Hello Kitty</h2>
+                <p>Medidas 10 alto, 9 ancho</p>
+                <p>Inccluye 50 Cajitas</p>                
+                <div class="precio">
+                    <p>$1000.0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <div class="separador">
+        <div class="contenido-separador contenedor">
+            <h2>En MonAzul nos esforzamos para que todo salga perfecto!!!
+            </h2>
+        </div>
+    </div>
+
+    <div class="container" id="Colores">
+        <br>
+        <div><center><h2 class= "subtitulo1">Colores disponibles para diseños, impresiones</h2></center></div>
+        <br>
+        <div class="color-box red">
+          <div class="color-name">Rojo</div>
+        </div>
+        <div class="color-box blue">
+          <div class="color-name">Azul</div>
+        </div>
+        <div class="color-box green">
+          <div class="color-name">Verde</div>
+        </div>
+        <div class="color-box yellow">
+          <div class="color-name">Amarillo</div>
+        </div>
+        <div class="color-box purple">
+          <div class="color-name">Morado</div>
+        </div>
+        <div class="color-box orange">
+          <div class="color-name">Naranja</div>
+        </div>
+        <div class="color-box pink" >
+          <div class="color-name">Rosa</div>
+        </div>
+        <div class="color-box teal" >
+          <div class="color-name">Turquesa</div>
+        </div>
+        <div class="color-box cyan" >
+          <div class="color-name">Cian</div>
+        </div>
+        <div class="color-box lime">
+          <div class="color-name">Lima</div>
+        </div>
+        <div class="color-box indigo">
+          <div class="color-name">Índigo</div>
+        </div>
+        <div class="color-box amber">
+          <div class="color-name">Ámbar</div>
+        </div>
+        <div class="color-box deep-orange">
+          <div class="color-name">Naranja Oscuro</div>
+        </div>
+        <div class="color-box deep-purple">
+          <div class="color-name">Morado Oscuro</div>
+        </div>
+        <div class="color-box light-blue">
+          <div class="color-name">Azul Claro</div>
+        </div>
+        <div class="color-box light-green">
+          <div class="color-name">Verde Claro</div>
+        </div>
+        <div class="color-box brown">
+          <div class="color-name">Marrón</div>
+        </div>
+        <div class="color-box grey">
+          <div class="color-name">Gris</div>
+        </div>
+      </div>
+
+    <section class="chef contenedor">
+        <h2>Chef ejecutivo</h2>
+            <div class="contenido-chef">
+                <div class="texto-chef">
+                    <h3>Nosotros tranformarmos tus ideas en algo genial!!!</h3>
+                    <p>Nos adaptamos a su gustos, colores, preferencia y a su evento.</p>
+                </div>
+                <div class="imagen-chef">
+                    <img data-src="/assets/logo.png" alt="logo">
+                </div>
+            </div>
+    </section>
+
+    <div class="linea">
+        <div class="contenido-separador contenedor">
+            <h2>En MonAzul nos encanta hacer diseños nuevos!!!</h2>
+        </div>
+    </div>
+    <h1><center>Calculadora</center></h1>
+    <h2><center>Aqui podras verificar tu total</center></h2>
+    <div class="calculator">
+        
+        <input type="text" id="result" readonly>
+        <div class="buttons">
+                <button onclick="appendNumber('9')">9</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('7')">7</button>
+            <button
+     onclick="clearResult()">c</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('4')">4</button>
+          <button onclick="deleteLast()">←</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('1')">1</button>
+          <button
+    onclick="appendOperator('/')">÷</button>
+                <button onclick="appendNumber('0')">0</button>
+          <button
+    onclick="appendOperator('*')">x</button>
+          <button onclick="appendOperator('-')">-</button>
+                <button onclick="appendOperator('+')">+</button>
+    
+          <button onclick="appendNumber('.')">.</button>
+                <button onclick="calculate()">=</button>
+    
+        </div>
+        <script src="js/calculadora.js"></script>
+
+      </div>
+     <h2 id="Matriz"><center>Matriz</center></h2>
+    <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14157.969336779619!2d-109.9835483!3d27.48506!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86c83e7b3bc87745%3A0xd9d563cb455c62d8!2sGiberny%203301%2C%20Sonora!5e0!3m2!1ses-419!2smx!4v1684393367335!5m2!1ses-419!2smx">
+        <a href="https://www.maps.ie/distance-area-calculator.html">measure distance on map</a>
+      </iframe>
+
+
+    <div class="formulario-contacto contenedor" id="Contactos">
+
+        <div class="informacion-contacto">
+            <h3>Contactanos</h3>
+            <p><i class="fas fa-map-marker-alt"></i>Giberny 3301, Alameda del cedro 2</del></p>
+            <p><i class="fas fa-envelope"></i> luca@turilli.it</p>
+            <p><i class="fas fa-phone-alt"></i>+52 644 408 8583</p>
+            <div class="redes-sociales">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+            </div>
+            <form action="Comentarios.php" class="formulario" method="POST" onsubmit="return validarFormulario()">
+                <div class="input-formulario" id="Opinion">
+
+                <h2> <center>Opinion de el sitio web</center></h2>
+
+                <h2 for="nombre">Nombre:</h2>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <h2 for="apellidos">Apellidos:</h2>
+                <input type="text" id="apellidos" name="apellidos" required>
+
+                <h2 for="email">Email:</h2>
+                <input type="email" id="email" name="email" required>
+
+                <h2>¿Cómo calificas le das a MonAzul?</h2>
+                <input type= "range"  id="cal" name="cal"  min=0 max=10>
+        
+                <h2 for="mensaje">Mensaje:</h2>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <input class="btn btn-Morado" type="submit" value="Enviar">
+            </div>
+        </form>
+
+
+            </div>
+    </div>
+    
+    <div class="pie-pagina ">
+        <div class="contenedor-piepagina contenedor">
+            <div class="info">
+                <h3>Dirección</h3>
+                <p>Giberny 3301, Alameda del cedro 2</p>
+            </div>
+            <div class="info">
+                <h3>Telefono</h3>
+                <p>+52 644 408 8583</p>
+            </div>
+            <div class="info">
+                <h3>Horarios</h3>
+                <p>Lunes - Domingo 9am - 11pm</p>
+                <div class="redes-sociales redes-pie">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Sitio web creado con fines educativos</p>
+        <p id="diaSemana"></p>
+<p id="fecha"></p>
+    <p id="hora"></p>
+ 
+    </footer>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
